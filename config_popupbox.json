@@ -1,0 +1,19 @@
+##### json formateret config til eboks
+{
+				"key": "eboks",
+				"name": "Send linket automatisk til eboks.",
+				"required": true,
+				"type": "radio",
+				"choices": [
+					{
+						"value": "1",
+						"name":	"Ja"
+					},
+					{
+						"value": "0",
+						"name":	"Nej"
+					}
+				],
+				"default": "0"
+			},
+			

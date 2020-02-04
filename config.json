@@ -1,0 +1,105 @@
+{
+    "name": "Save and  Return config",
+    "namespace": "OPEN\\SaveAndReturnConfig", 
+    "description": "Dette modul fjerner Popupboksen og muligheden for at sende link til egen mail-adresse fra Save and Return later siden. Siden kan kostumiseres med en projektspecifik tekst og det kan vælges om koden skal vises eller ej. Teksten der vises skal tilpasses den konkrete situation. Vær opmærksom på, at hvis du tillader at redigere komplette besvarelser så vil du ikke automatisk komme videre til det seneste spørgeskema, hvis du har flere efter hinanden. Den fjerner muligheen for at få link til survey queuen, og i den forbindelse fjerner den helt muligheden for survey queue som overlay på spørgeskemasiden. Så der er jo delvis overlap med Stealth queue modulet",
+    "authors": [
+        {
+             "name": "Allan Lind-Thomsen",
+             "email": "allan.lind-thomsen@rsyd.dk",
+             "institution": "OPEN Patient Exploratory Network, Region syddanmark"
+         }
+     ],
+     "permissions": [
+        "redcap_every_page_top"
+      ],
+	  "versions": [
+			{
+				"1.03": "Version lavet specifikt til OP_680, basal funktionalitet ",
+				"1.04": "Tilføjer funktionaliteten for 'survey login' og adgang uden password. Giver mulighed for projekspecifik tilpasning."
+			}
+		],
+	"project-settings": [
+			{
+				"key": "showqueue",
+				"name": "Skal det være muligt at sende et survey queue link",
+				"required": true,
+				"type": "radio",
+				"choices": [
+					{
+						"value": "1",
+						"name":	"Ja"
+					},
+					{
+						"value": "0",
+						"name":	"Nej"
+					}
+				],
+				"default": "0"
+			},
+			{
+				"key": "onpagetext",
+				"name": "Hvilken tekst skal vises på siden for 'Gem og vend tilbage senere'.",
+				"required": true,
+				"type": "textarea",
+				"default": "Du skal bruge linket og koden i det oprindelige brev fra eboks til at fortsætte med spørgeskemaet."
+			},
+			{
+				"key": "logintext",
+				"name": "Hvilken tekst skal vises på siden for 'Survey login'.",
+				"required": true,
+				"type": "textarea",
+				"default": "Du har valgt at stoppe besvarelsen og vende tilbage på et senere tidspunkt for at afslutte besvarelsen. For at vende tilbage til spørgeskemaet skal du bruge survey linket til spørgeskemaet. Linket kan gemmes ved at gemme denne side som et bogmærke."
+			},
+			{
+				"key": "showcode",
+				"name": "Skal returncode vises på siden?",
+				"required": true,
+				"type": "radio",
+				"choices": [
+					{
+						"value": "1",
+						"name":	"Ja"
+					},
+					{
+						"value": "0",
+						"name":	"Nej"
+					}
+				],
+				"default": "0"
+			},
+			{
+				"key": "showpopup",
+				"name": "Skal skal popupboksen med returncode vises?",
+				"required": true,
+				"type": "radio",
+				"choices": [
+					{
+						"value": "1",
+						"name":	"Ja"
+					},
+					{
+						"value": "0",
+						"name":	"Nej"
+					}
+				],
+				"default": "0",
+				"branchingLogic": {
+					"field": "showcode",
+					"op": "=",
+					"value": "1"
+				}
+			},
+			{
+				"key": "popuptext",
+				"name": "Hvilken tekst skal vises i popup boksen.",
+				"required": true,
+				"type": "textarea",
+				"default": "Denne kode skal bruges til at komme tilbage og fortsætte spørgeskemaet. Koden findes også i brevet med linket i Eboks.",
+				"branchingLogic": {
+					"field": "showpopup",
+					"op": "=",
+					"value": "1"
+				}
+			}
+		]
+ }
