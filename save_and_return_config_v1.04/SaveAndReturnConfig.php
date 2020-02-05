@@ -25,7 +25,7 @@ class SaveAndReturnConfig extends AbstractExternalModule {
 						if(aElem != null){
 						//var onclickText=aElem[0].getAttribute('onclick').replace(new RegExp('}\\);$'),'hideSqButton();});');
 							aElem[0].setAttribute('onclick','');
-						
+						  	//forslag: set href til survey queue så der ikke bruge overlay, men skal gemme først.
 							aElem[0].innerHTML="";
 						}
 					}
