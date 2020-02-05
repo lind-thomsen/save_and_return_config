@@ -15,7 +15,7 @@
 	  "versions": [
 			{
 				"1.03": "Version lavet specifikt til OP_680, basal funktionalitet ",
-				"1.04": "Tilføjer funktionaliteten for 'survey login' og adgang uden password. Giver mulighed for projekspecifik tilpasning."
+				"1.04": "Navnet ændret. Tilføjer funktionaliteten for 'survey login' og adgang uden password. Giver mulighed for projekspecifik tilpasning."
 			}
 		],
 	"project-settings": [
@@ -38,14 +38,14 @@
 			},
 			{
 				"key": "onpagetext",
-				"name": "Hvilken tekst skal vises på siden for 'Gem og vend tilbage senere'.",
+				"name": "Hvilken tekst skal vises på siden for 'Gem og vend tilbage senere' (Der må ikke bruges linieskift, brug istedet <br>).",
 				"required": true,
 				"type": "textarea",
 				"default": "Du skal bruge linket og koden i det oprindelige brev fra eboks til at fortsætte med spørgeskemaet."
 			},
 			{
 				"key": "logintext",
-				"name": "Hvilken tekst skal vises på siden for 'Survey login'.",
+				"name": "Hvilken tekst skal vises på siden for 'Survey login' (Der må ikke bruges linieskift, brug istedet <br>).",
 				"required": true,
 				"type": "textarea",
 				"default": "Du har valgt at stoppe besvarelsen og vende tilbage på et senere tidspunkt for at afslutte besvarelsen. For at vende tilbage til spørgeskemaet skal du bruge survey linket til spørgeskemaet. Linket kan gemmes ved at gemme denne side som et bogmærke."
